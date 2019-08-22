@@ -9,7 +9,7 @@ pipeline{
            echo 'Verifying LastReboot' 
            sh '/home/jenkins/lastreboot.sh'
            sh '/home/jenkins/currentdate.sh'
-           //sh '/home/jenkins/verifylastreboot.sh'
+           sh '/home/jenkins/verifylastreboot.sh'
            
           }
       }
