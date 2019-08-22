@@ -9,14 +9,14 @@ pipeline{
            echo 'Verifying LastReboot' 
            sh '/home/jenkins/lastreboot.sh'
            sh '/home/jenkins/currentdate.sh'
-           sh '/home/jenkins/verifylastreboot.sh'
+           //sh '/home/jenkins/verifylastreboot.sh'
            
           }
       }
       stage ('TestCase2'){
       steps{
            echo 'Verifying Patchlog'
-            sh '/home/jenkins/patchlog.sh > patchlog'
+            //sh '/home/jenkins/patchlog.sh > patchlog'
             sh '/home/jenkins/checkyumlog.sh patchlog'
            
       }
