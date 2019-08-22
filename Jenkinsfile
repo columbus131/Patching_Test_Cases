@@ -6,7 +6,6 @@ pipeline{
   stages {
       stage ('TestCase1'){
       steps{
-           //sh 'sleep 30s'
            echo 'Verifying LastReboot' 
            sh '/home/jenkins/lastreboot.sh'
            sh '/home/jenkins/currentdate.sh'
@@ -19,8 +18,7 @@ pipeline{
            echo 'Verifying Patchlog'
             sh '/home/jenkins/patchlog.sh'
             sh '/home/jenkins/checkyumlog.sh patchlog'
-           //sh 'sleep 10s'
-           //sh 'exit 1'
+           
       }
   }
     
