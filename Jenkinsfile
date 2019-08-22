@@ -16,7 +16,7 @@ pipeline{
       stage ('TestCase2'){
       steps{
            echo 'Verifying Patchlog'
-            sh '/home/jenkins/patchlog.sh'
+            sh '/home/jenkins/patchlog.sh > patchlog'
             sh '/home/jenkins/checkyumlog.sh patchlog'
            
       }
