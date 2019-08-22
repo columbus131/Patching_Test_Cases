@@ -23,7 +23,6 @@ pipeline{
   }
     
     }
-  }
   post {
     success {
                 echo 'Tests Passed'
@@ -37,3 +36,4 @@ pipeline{
              body: "Test  Failed for some reason  ${env.BUILD_URL}/consoleText"
     }
   }
+}
