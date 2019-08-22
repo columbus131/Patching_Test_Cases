@@ -31,9 +31,7 @@ pipeline{
              body: "Test Passed  ${env.BUILD_URL}/consoleText"
     }
      failure {
-        mail to: 'bramireddy@idirect.net',
-             subject: "Test Failed: ${currentBuild.fullDisplayName}",
-             body: "Test  Failed for some reason  ${env.BUILD_URL}/consoleText"
+        build job: 'oraclestop', propagate: true, wait: true
     }
   }
 }
