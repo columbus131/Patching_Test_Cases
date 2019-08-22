@@ -31,7 +31,7 @@ pipeline{
              body: "Test Passed  ${env.BUILD_URL}/consoleText"
     }
      failure {
-        build job: 'oraclestop', propagate: true, wait: true
+        build job: 'oraclestop', propagate: true, wait: false
     }
   }
 }
