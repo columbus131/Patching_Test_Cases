@@ -27,14 +27,14 @@ pipeline{
     success {
                 echo 'Tests Passed'
            mail to: 'bramireddy@idirect.net',
-             subject: "Test Passed : ${currentBuild.fullDisplayName}",
-             body: "Test Passed  ${env.BUILD_URL}/consoleText"
+             subject: "Change Completed Succesfully Inform CAB : ${currentBuild.fullDisplayName}",
+             body: "Change Completed Succesfully  ${env.BUILD_URL}/consoleText"
     }
      failure {
-        build job: 'oraclestop', propagate: true, wait: false
+        //build job: 'oraclestop', propagate: true, wait: false
        mail to: 'bramireddy@idirect.net',
-             subject: "Test Failed retrying : ${currentBuild.fullDisplayName}",
-             body: "Test Failed Retrying  ${env.BUILD_URL}/consoleText"
+             subject: "Test Failed Please check something is not Right : ${currentBuild.fullDisplayName}",
+             body: "Test Failed Please check something is not Right  ${env.BUILD_URL}/consoleText"
     }
   }
 }
