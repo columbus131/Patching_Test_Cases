@@ -27,8 +27,8 @@ pipeline{
     success {
                 echo 'Tests Passed'
            mail to: 'bramireddy@idirect.net',
-             subject: "Change Completed Succesfully Inform CAB : ${currentBuild.fullDisplayName}",
-             body: "Change Completed Succesfully  ${env.BUILD_URL}/consoleText"
+             subject: "Change Completed Succesfully ",
+             body: "Security Patching to ERP Servers -- (1 hr. Service disruption anticipated to ERP  Integration Application) "
     }
      failure {
         //build job: 'oraclestop', propagate: true, wait: false
