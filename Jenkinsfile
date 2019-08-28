@@ -31,7 +31,6 @@ pipeline{
              body: "Test Passed  ${env.BUILD_URL}/consoleText"
     }
      failure {
-        retry(1)
         build job: 'oraclestop', propagate: true, wait: false
        mail to: 'bramireddy@idirect.net',
              subject: "Test Failed retrying : ${currentBuild.fullDisplayName}",
