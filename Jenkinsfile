@@ -34,6 +34,7 @@ pipeline{
        mail to: 'bramireddy@idirect.net',
              subject: "Test Failed Please check something is not Right : ${currentBuild.fullDisplayName}",
              body: "Test Failed Please check something is not Right  ${env.BUILD_URL}/consoleText"
+       from : 'noreply@jenkins.com'
     }
   }
 }
