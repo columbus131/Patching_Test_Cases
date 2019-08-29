@@ -25,7 +25,8 @@ pipeline{
   post {
     success {
                 echo 'Tests Passed'
-           mail to: 'bramireddy@idirect.net',
+           mail from: 'noreply@alfred.idirect.net' ,
+              to: 'bramireddy@idirect.net',
              subject: "Change Completed Succesfully ",
              body: "Security Patching to ERP Servers -- (1 hr. Service disruption anticipated to ERP  Integration Application) "
     }
