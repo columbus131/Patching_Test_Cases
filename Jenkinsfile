@@ -7,9 +7,9 @@ pipeline{
       stage ('TestCase1'){
       steps{
            echo 'Verifying LastReboot' 
-           sh '/home/jenkins/lastreboot.sh'
-           sh '/home/jenkins/currentdate.sh'
-           sh '/home/jenkins/verifylastreboot.sh'
+           //sh '/home/jenkins/lastreboot.sh'
+           //sh '/home/jenkins/currentdate.sh'
+           sh '~/scripts/Testcases/verifylastreboot.sh'
            
           }
       }
@@ -17,7 +17,7 @@ pipeline{
       steps{
            echo 'Verifying Patchlog'
             //sh '/home/jenkins/patchlog.sh > patchlog'
-            sh '/home/jenkins/checkyumlog.sh patchlog'
+            sh '~/scripts/Testcases/checkyumlog.sh'
            
       }
   }
