@@ -7,8 +7,7 @@ pipeline{
       stage ('TestCase1'){
       steps{
            echo 'Verifying LastReboot' 
-           //sh '/home/jenkins/lastreboot.sh'
-           //sh '/home/jenkins/currentdate.sh'
+           // Test Case -- Verifying the Server Last Reboot should Match the Current Date
            sh '~/scripts/Testcases/verifylastreboot.sh'
            
           }
@@ -16,7 +15,7 @@ pipeline{
       stage ('TestCase2'){
       steps{
            echo 'Verifying Patchlog'
-            //sh '/home/jenkins/patchlog.sh > patchlog'
+            // Check whether any security Updates Installed
             sh '~/scripts/Testcases/checkyumlog.sh'
            
       }
