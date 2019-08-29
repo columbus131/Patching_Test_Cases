@@ -33,7 +33,7 @@ pipeline{
         //build job: 'oraclestop', propagate: true, wait: false
        mail to: 'bramireddy@idirect.net',
              subject: "Test Failed Please check something is not Right : ${currentBuild.fullDisplayName}",
-             body: "Test Failed Please check something is not Right  ${env.BUILD_URL}/consoleText"
+             body: "Test Failed Please check something is not Right  ${env.BUILD_URL}/consoleText",
        mail from: 'noreply@jenkins.com'
     }
   }
